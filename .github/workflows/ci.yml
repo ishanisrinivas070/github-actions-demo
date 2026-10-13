@@ -1,8 +1,6 @@
 name: Python CI
 
-on:
-  push:
-  pull_request:
+on: [push]
 
 jobs:
   test:
@@ -18,4 +16,5 @@ jobs:
           python-version: '3.12'
 
       - name: Run Python program
-        run: python calculator.py
+        run: |
+          echo -e "10\n5\n1" | python calculator.py
